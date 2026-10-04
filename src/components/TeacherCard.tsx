@@ -3,9 +3,10 @@ import './TeacherCard.css'
 
 interface TeacherCardProps {
     teacher: Teacher;
+    onLike: (id: string) => void;
 }
 
-function TeacherCard({ teacher }: TeacherCardProps) {
+function TeacherCard({ teacher, onLike }: TeacherCardProps) {
     return (
         <div className="card">
             {teacher.photo ? (
@@ -17,6 +18,7 @@ function TeacherCard({ teacher }: TeacherCardProps) {
             <p>{teacher.lastName}</p>
             <p>{teacher.speciality}</p>
             <p>{teacher.country}</p>
+            <button onClick={() => onLike(teacher.id)}>{teacher.likesCount}</button>
         </div>
     )
 }
