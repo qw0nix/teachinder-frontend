@@ -14,11 +14,10 @@ function TeacherCard({ teacher, onLike }: TeacherCardProps) {
             ) : (
                 <span className='avatar'>{teacher.firstName[0]}{teacher.lastName[0]}</span>
             )}
-            <p>{teacher.firstName}</p>
-            <p>{teacher.lastName}</p>
-            <p>{teacher.speciality}</p>
-            <p>{teacher.country}</p>
-            <button onClick={() => onLike(teacher.id)}>{teacher.likesCount}</button>
+            <p className="name">{teacher.firstName} {teacher.lastName}</p>
+            <p className="subject">{teacher.speciality}</p>
+            <p className="country">{teacher.country}</p>
+            <button className="like-btn" onClick={() => onLike(teacher.id)}>{teacher.likesCount}</button>
         </div>
     )
 }

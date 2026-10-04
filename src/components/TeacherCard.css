@@ -4,6 +4,7 @@
     align-items: center;
     text-align: center;
     width: 140px;
+    font-family: sans-serif;
 }
 
 .avatar {
@@ -12,4 +13,35 @@
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 8px;
+}
+
+.name {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.subject {
+    color: #888;
+    font-size: 14px;
+}
+
+.country {
+    color: #888;
+    font-size: 14px;
+}
+
+.like-btn {
+    margin-top: 8px;
+    border: 1px solid orange;
+    background: white;
+    color: orange;
+    border-radius: 6px;
+    padding: 4px 10px;
+    cursor: pointer;
 }
