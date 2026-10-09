@@ -1,47 +1,83 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 140px;
-    font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  padding: 16px 8px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card p {
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2b2b2b;
+}
+
+.card-subject {
+  margin-top: 4px !important;
+  font-size: 12px;
+  color: #8a8a8a;
+}
+
+.card-country {
+  margin-top: 4px !important;
+  font-size: 13px;
+  color: #2b2b2b;
 }
 
 .avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid orange;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: orange;
-    margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 12px;
+  border: 3px solid #f0592b;
+  border-radius: 50%;
+  object-fit: cover;
+  font-size: 28px;
+  font-weight: bold;
+  color: #f0592b;
+  transition: border-color 0.2s;
 }
 
-.name {
-    font-weight: 600;
-    margin-bottom: 2px;
-}
-
-.subject {
-    color: #888;
-    font-size: 14px;
-}
-
-.country {
-    color: #888;
-    font-size: 14px;
+.card:hover .avatar {
+  border-color: #d8481d;
 }
 
 .like-btn {
-    margin-top: 8px;
-    border: 1px solid orange;
-    background: white;
-    color: orange;
-    border-radius: 6px;
-    padding: 4px 10px;
-    cursor: pointer;
+  margin-top: 8px;
+  padding: 4px 12px;
+  border: 1px solid #f0592b;
+  border-radius: 6px;
+  background: #fff;
+  color: #f0592b;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.like-btn:hover {
+  background: #f0592b;
+  color: #fff;
+}
+
+.like-btn:active {
+  transform: scale(0.95);
 }

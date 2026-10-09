@@ -1,6 +1,7 @@
 .teachers-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
   justify-content: center;
+  gap: 24px;
+  padding: 24px 32px;
 }

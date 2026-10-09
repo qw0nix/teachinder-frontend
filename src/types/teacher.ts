@@ -7,16 +7,16 @@ export interface Teacher {
     phone: string;
     city: string;
     birthDate: string;
-    gender: string;
-    nationality?: string | null;
     speciality: string;
-    photo?:  string | null;
     likesCount: number;
+    gender: "MALE" | "FEMALE";
+    nationality?: string | null;
+    photo?: string | null;
     notes?: string | null;
     backgroundColor?: string | null;
 }
 
 export interface TeachersListResponse {
-    totalCount: number;
     teachers: Teacher[];
+    totalCount: number;
 }
